@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="recentLink"
+            type="com.console.openinapp.model.Link" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/white_background"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/openWebLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1dp"
+                android:layout_margin="2dp">
+
+                <ImageView
+                    android:id="@+id/recentLinkImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:maxLines="1"
+                    android:textFontWeight="400"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/black"
+                    android:text="@{recentLink.title}"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textFontWeight="400"
+                    android:textColor="@color/grey"
+                    android:text="@{recentLink.created_at}"
+                     />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="end"
+                    android:textFontWeight="600"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/black"
+                    android:text="@{String.valueOf(recentLink.total_clicks)}"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textFontWeight="400"
+                    android:textColor="@color/grey"
+                    android:text="Clicks"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/copy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:background="@drawable/dashed_boarder">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:layout_marginRight="100dp"
+                android:layout_weight="1"
+                android:textFontWeight="400"
+                android:textColor="@color/blue"
+                android:text="@{recentLink.web_link}"
+                />
+            
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="20dp"
+                android:src="@drawable/copy"
+                app:tint="@color/blue"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

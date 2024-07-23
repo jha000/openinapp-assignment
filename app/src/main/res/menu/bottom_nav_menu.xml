@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/links"
+        android:icon="@drawable/hyperlink"
+        android:title="Links" />
+    <item
+        android:id="@+id/courses"
+        android:icon="@drawable/book"
+        android:title="Courses" />
+    <item
+        android:id="@+id/add"
+        android:title="" />
+    <item
+        android:id="@+id/campaigns"
+        android:icon="@drawable/campaigns"
+        android:title="Campaigns" />
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/user"
+        android:title="Profile" />
+</menu>
