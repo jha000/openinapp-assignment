@@ -39,6 +39,8 @@ class LinkFragment : Fragment() {
 
         viewModel.overallUrlChart.observe(viewLifecycleOwner) { chartData ->
             ChartUtils.updateChart(requireContext(), binding.lineChart, chartData)
+            binding.progressBar2.visibility = View.GONE
+            binding.graphLayout.visibility = View.VISIBLE
         }
 
         val adapter = LinkAdapter()
