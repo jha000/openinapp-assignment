@@ -1,6 +1,8 @@
 # OpenInApp
 
 ## UI
+![image](https://github.com/user-attachments/assets/76c10c76-581f-4d05-82fd-d88945692edb)
+
 
 ## Features
 
